@@ -11,3 +11,9 @@ class RoomTest < Minitest::Test
 def setup()
   @room = Room.new(10)
 end
+
+def test_room_has_price()
+  assert_equal(10, @room.price)
+end
+
+end
