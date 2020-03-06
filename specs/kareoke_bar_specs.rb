@@ -41,8 +41,8 @@ def test_add_song_to_room()
   assert_equal(1, @kareoke_bar.song_count())
 end
 
-def test_can_guest_hire_room()
-  @kareoke_bar.hire_room(@room1)
-  assert_equal(true, @kareoke_bar.fire_room())
-
+def test_remove_guests_from_room()
+  @kareoke_bar.remove_guest(@guest1)
+  assert_equal(0, @kareoke_bar.room_count())
+end
 end

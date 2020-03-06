@@ -29,6 +29,8 @@ def add_song(song)
   return @songs.length
 end
 
-def hire_room()
-  if
+def remove_guest(guest)
+  @room1.delete(guest)
+  return @room1.length()
+end
 end
