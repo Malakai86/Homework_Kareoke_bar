@@ -45,4 +45,13 @@ def test_remove_guests_from_room()
   @kareoke_bar.remove_guest(@guest1)
   assert_equal(0, @kareoke_bar.room_count())
 end
+
+def test_too_many_guests()
+  new_guest = Guest.new("Tony", 30)
+  @kareoke_bar.add_guest(new_guest)
+  @kareoke_bar.add_guest(@guest1)
+  @kareoke_bar.add_guest(@guest2)
+  @kareoke_bar.remove_guest(new_guest)
+  assert_equal(2, @kareoke_bar.room_count)
+end
 end
