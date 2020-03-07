@@ -17,4 +17,12 @@ end
 def test_guest_has_money()
   assert_equal(20, @guest.wallet)
 end
+
+def test_guest_spend()
+  @guest.spend(5)
+  assert_equal(15, @guest.wallet)
+end
+
+
+
 end
