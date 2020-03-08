@@ -8,14 +8,12 @@ require_relative('../song')
 class SongTest < Minitest::Test
 
 def setup()
-  @song = Song.new("Horse with no name", "America")
+  @song = Song.new("America: Horse with no name")
 end
 
-  def test_song_has_title()
-    assert_equal("Horse with no name", @song.title)
+  def test_song_has_name()
+    assert_equal("America: Horse with no name", @song.name)
   end
 
-  def test_song_has_artist()
-    assert_equal("America", @song.artist)
-end
+
 end

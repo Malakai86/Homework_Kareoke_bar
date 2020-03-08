@@ -1,9 +1,10 @@
 class Kareoke_bar
 
-attr_reader :name
+attr_reader :name, :price
 
-def initialize(name)
+def initialize(name, price)
   @name = name
+  @price = 10
 
   @room1 = []
   @room2 = []
@@ -41,5 +42,11 @@ def too_many_guests(tony, clive, jane)
     @room2.delete(tony)
     return @room2.length()
 end
+
+def pay_fee(fee)
+  @guest.wallet -= fee
+end
+
+
 end
 end
