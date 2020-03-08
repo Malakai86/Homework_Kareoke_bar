@@ -62,6 +62,13 @@ def test_guest_has_money()
   assert_equal(30, @guest1.wallet)
 end
 
+
+def test_guest_pay_fee()
+  @guest1.pay_fee(10)
+  assert_equal(20, @guest1.wallet())
+end
+
+
 def test_guest_favorite_song()
   new_song = Song.new("Sweet Child O' Mine")
   new_guest = Guest.new("Barry", 35, "Sweet Child O' Mine")
@@ -69,8 +76,7 @@ def test_guest_favorite_song()
   @kareoke_bar.add_guest(new_guest)
   assert_equal("Whoo!! I love Sweet Child O' Mine!", new_guest.cheer())
 end
-# def test_guest_pay_fee()
-#   @guest.pay_fee(10)
-#   assert_equal(20, @guest1.wallet)
-# end
+
+
+
 end
