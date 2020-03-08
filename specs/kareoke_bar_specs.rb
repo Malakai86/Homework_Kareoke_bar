@@ -3,6 +3,7 @@ require('minitest/reporters')
 Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
 
 require_relative('../room')
+require_relative('../bar')
 require_relative('../guests')
 require_relative('../song')
 require_relative('../kareoke_bar')
@@ -15,7 +16,16 @@ class Kareoke_barTest < Minitest::Test
     @guest2 = Guest.new("Jane", 20, "Bad Guy")
     @song1 = Song.new("Aeroplane")
     @song2 = Song.new("Fast Car")
-
+    @bar = [
+      {
+        drink: "Beer",
+        price: 4
+      },
+      {
+        drink: "Wine",
+        price: 5
+      }
+    ]
 
     @songs = [@song1, @song2]
   end
@@ -76,7 +86,6 @@ def test_guest_favorite_song()
   @kareoke_bar.add_guest(new_guest)
   assert_equal("Whoo!! I love Sweet Child O' Mine!", new_guest.cheer())
 end
-
 
 
 end

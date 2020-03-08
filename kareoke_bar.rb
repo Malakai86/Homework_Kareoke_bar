@@ -1,10 +1,10 @@
 class Kareoke_bar
 
-attr_reader :name, :price
+attr_reader :name, :fee
 
-def initialize(name, price)
+def initialize(name, fee)
   @name = name
-  @price = 10
+  @fee = 10
 
   @room1 = []
   @room2 = []

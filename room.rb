@@ -1,10 +1,10 @@
 class Room
 
-attr_reader :price
+attr_reader :fee
 
-def initialize(price)
+def initialize(fee)
 
-  @price = price
-  
+  @fee = fee
+
 end
 end
